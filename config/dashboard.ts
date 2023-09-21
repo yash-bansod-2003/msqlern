@@ -3,11 +3,11 @@ import { DashboardConfig } from "@/types"
 export const dashboardConfig: DashboardConfig = {
     mainNav: [
         {
-            title: "Documentation",
+            title: "Playground",
             href: "/docs",
         },
         {
-            title: "Support",
+            title: "blog",
             href: "/support",
             disabled: true,
         },
@@ -19,7 +19,7 @@ export const dashboardConfig: DashboardConfig = {
             icon: "post",
         },
         {
-            title: "Billing",
+            title: "Tables",
             href: "/dashboard/billing",
             icon: "billing",
         },

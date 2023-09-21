@@ -6,6 +6,9 @@ import { MainNav } from "@/components/main-nav"
 import { DashboardNav } from "@/components/nav"
 import { SiteFooter } from "@/components/site-footer"
 import { UserAccountNav } from "@/components/user-account-nav"
+import { buttonVariants } from "@/components/ui/button"
+import { cn } from "@/lib/utils"
+import Link from "next/link"
 
 interface DashboardLayoutProps {
     children?: React.ReactNode
@@ -25,6 +28,15 @@ export default async function DashboardLayout({
             <header className="sticky top-0 z-40 border-b bg-background">
                 <div className="container flex h-16 items-center justify-between py-4">
                     <MainNav items={dashboardConfig.mainNav} />
+                    <Link
+                        href="https://github.com/yash-bansod-2003"
+                        className={cn(
+                            buttonVariants({ variant: "secondary", size: "sm" }),
+                            "px-4"
+                        )}
+                    >
+                        Developer Yash Bansod
+                    </Link>
                     <UserAccountNav
                         user={{
                             name: user.name,
